@@ -29,45 +29,41 @@ public class Radio {
         }
         this.currentVolume = currentVolume;
     }
-  public void next() {
+
+    public void next() {
         if (currentStation != 9) {
             currentStation++;
             return;
         }
         currentStation = 0;
-  }
+    }
 
-  public void prev() {
-      if (currentStation != 0) {
-          currentStation--;
-      } else {
-          currentStation = 9;
-      }
-  }
+    public void prev() {
+        if (currentStation != 0) {
+            currentStation--;
+        } else {
+            currentStation = 9;
+        }
+    }
 
-      public void increaseVolume() {
-          if (currentVolume < 100) {
-              currentVolume = currentVolume + 1;
-          }
-          else {
-              currentVolume = 100;
-          }
-      }
+    public void increaseVolume() {
+        if (currentVolume < 100) {
+            currentVolume = currentVolume + 1;
+        } else {
+            currentVolume = 100;
+        }
+    }
+
     public void reduceVolume() {
 
         if (currentVolume <= 0) {
-            return;
-        }
-        if (currentVolume <= 100) {
-            currentVolume = currentVolume - 1;
+    currentVolume = 0;
         }
         else {
-            currentVolume = 100;
+            currentVolume = currentVolume - 1;
         }
 
     }
-
-
-  }
+}
 
 
